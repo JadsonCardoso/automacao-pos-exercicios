@@ -21,8 +21,7 @@ Exemplos:
     - Pantera Negra
 
  */
-sadsadssd
-    aaaa
+
 // const nomeDog = "tH   oR@!%  "
 const nomeDog = '   Ba!ley Mari@    '
 

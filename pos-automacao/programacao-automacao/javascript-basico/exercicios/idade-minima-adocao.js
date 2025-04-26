@@ -6,7 +6,6 @@ let idade1 = 1
 let idadeComparada = idade1 >= 2 ? 'Sim' : 'Não'
 console.log(`Nome do dog ${ nomeDog1 } idade ${ idade1 } está apto para adoção? ${ idadeComparada  }`) 
 
-
 // Feito em sala: 
 const idadeMinima1 = 2
     const nomeDog = "Toby"
