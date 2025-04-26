@@ -51,9 +51,9 @@ switch (porteDog) {
 
 // feito em aula
 
-const nome = `Pantera`
+// const nome = `Pantera`
 const porte = `médio`
-const tempo = 30
+// const tempo = 30
 
 // decidir o tipo de atividade com base no porte
 let atividade
