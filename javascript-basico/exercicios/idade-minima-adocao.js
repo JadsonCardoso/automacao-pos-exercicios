@@ -35,8 +35,8 @@ const adocao = idade >= idadeMinima
 
 const adocaov2 = idade >= idadeMinima || porte === 'P'
 
-console.log(adocao)
-console.log(adocaov2)
+// console.log(adocao)
+// console.log(adocaov2)
 
 function verificarSePodeSerAdotado(idade, porte) {
   const adocao = idade >= idadeMinima 
@@ -56,5 +56,5 @@ function verificarSePodeSerAdotado(idade, porte) {
 
 verificarSePodeSerAdotado(1, 'M')
 verificarSePodeSerAdotado(2, 'M')
-verificarSePodeSerAdotado(2, 'P')
-verificarSePodeSerAdotado(1, 'P')
+// verificarSePodeSerAdotado(2, 'P')
+// verificarSePodeSerAdotado(1, 'P')

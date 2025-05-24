@@ -30,3 +30,4 @@ console.log(!dog.adotado || dog.peso < 10) // true
 // !  - NÃO / NOT - NEGAÇÃO DE VALOR
 console.log(true) // true
 console.log(!true) // false
+console.log(!5 > 2) // false
