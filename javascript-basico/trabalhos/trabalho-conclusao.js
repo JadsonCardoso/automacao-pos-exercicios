@@ -1,6 +1,6 @@
 // Tags de Identificação
 function geradorDeTagsDeIdentificacao(nome) {
-    return nome.toLocaleUpperCase()
+    return nome.toUpperCase()
 }
 
 
@@ -21,7 +21,8 @@ function calcularConsumoDeRacao(nome, idade, peso) {
 }
 
 // Decidir Tipo de Atividade
-function decidirTipoDeAtividadePorPorte(porte, atividade) {
+function decidirTipoDeAtividadePorPorte(porte) {
+    let atividade
     switch (porte) {
     case 'pequeno':
         atividade = `brincar dentro de casa`

@@ -7,13 +7,13 @@ function minhaFuncao() {
     console.log("Testando!!")
 }
 
-// chamando a funcao
+// chamando a funcao:Chamar a função executa realmente as ações especificadas com os parâmetros indicados.
 minhaFuncao()
 
 // Colocando a funçaõ em uma variável
 
 // Ao criar uma função como CONTANTE, ela não pode ser subscripta, muitas DEVS criam assim, para questão de CONSISTANCIA PARA NÃO SER SUBSCRITA, E QUE O CÓDIGO SERÁ EXECUTADO CORRETAMENTE
-// Por isso, que podemos optar ou nõa por usar constante dentro da variável CONST
+// Por isso, que podemos optar ou nõa por usar FUNCOES dentro da variável CONST
 const minhaFuncaoEmVariavel = function () { // Como a variável já tem um NOME, então não presisamos dar nome a FUNÇÃO, ela é anônima.
     console.log("Função em variável")
 }
@@ -21,7 +21,7 @@ const minhaFuncaoEmVariavel = function () { // Como a variável já tem um NOME,
 //Chamo a função pelo o NOME DA VARIÁVEL
 minhaFuncaoEmVariavel()
 
-// Função com argumento/parametro
+// Função com argumento/parametro: Os argumentos de uma função não estão limitados a strings e números. Você pode passar objetos para uma função.
 function funcaoComParametro(txt) { //Passando uma variável como parâmetro
     console.log(`Imprimindo: ${txt}`) // Exibindo CONSOLE com o valor que será passado para a variável do parâmetro
 }
@@ -45,6 +45,9 @@ const resultado = soma (a, b) // Aqui ela vai resultar o resultado da soma de n1
 console.log(resultado)
 
 // Escopo das funções
+// No entanto, uma função pode acessar todas variáveis e funções definida fora do escopo onde ela está definida. Em outras palavras, 
+// a função definida no escopo global pode acessar todas as variáveis definidas no escopo global
+// A função definida dentro de outra função também pode acessar todas as variáveis definidas na função hospedeira e outras variáveis ao qual a função hospedeira tem acesso.
 // A variável que tem o valor dentro da função não é alterada pelo o valor da variável que estar fora da função, mesma que elas tenham o mesmo nome.
 let y = 10
 
@@ -164,6 +167,10 @@ repeteTexto("Testando com quantidade por DEFAULT")
 repeteTexto("Testando OUTRA quantidade", 5)
 
 // Closure: Conceito - Eu tenho valor dentro de um escopo e consigo reaproveitar por causa de uma outra função
+// A função interna só pode ser acessada a partir de declarações em função externa.
+// A função interna forma uma closure: a função interna pode usar os argumentos e variáveis da função externa,
+// Uma vez que a função interna forma uma closure, você pode chamar a função externa e especificar argumentos para a função externa e interna:
+// enquanto a função externa não pode usar os argumentos e variáveis da função interna.
 
 function someFunction() {
     let txt = "Alguma coisa"
