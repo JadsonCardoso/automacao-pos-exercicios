@@ -74,3 +74,11 @@ console.log(addexterna(2,3)) // A função interna vai multiplicar: 2 x 2 = 4, 3
     b(2)
  }
 a(1) //
+
+// Funções de seta
+
+let g = ['Teste 1', 'Teste 2', 'Teste 3', 'Teste 4']
+
+let a1 = g.map((s) => s.length) // Função curta
+
+console.log(a1)

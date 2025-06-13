@@ -32,3 +32,5 @@ describe('Testes da disciplina - fundamentos JS', () => {
    });
 
 });
+
+// npx mocha testes/trabalho-final.js : Executar o testes
