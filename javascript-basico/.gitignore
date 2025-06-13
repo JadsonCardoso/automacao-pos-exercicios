@@ -1,3 +1,0 @@
-// Aqui, colcoando arquivos para serem ignorados e que não serão enviados para o github
-node_modules
-package-lock.json
