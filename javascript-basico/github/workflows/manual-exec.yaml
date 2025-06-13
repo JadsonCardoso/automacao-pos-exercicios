@@ -4,7 +4,7 @@ on:
   workflow_dispatch:  # Permite executar manualmente pela aba "Actions"
 
 jobs:
-  test:
+  unidade:
     runs-on: ubuntu-latest
 
     steps: 
