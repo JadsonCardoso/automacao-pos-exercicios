@@ -324,3 +324,111 @@ function adicionarTarefa(titulo, prioridade) {
   prat.push('ADD')
 
   console.log(prat)
+
+  // Catálogo de Filmes
+
+  const filmes = [
+    { titulo: 'Interrestela', genero: 'Ficção Científica' },
+  ]
+
+  console.log(filmes)
+
+  function adicionarFilmeFinal(titulo, genero){
+      filmes.push({
+        titulo: titulo,
+        genero: genero
+      })
+
+      return filmes
+  }
+
+  
+  console.log(adicionarFilmeFinal('Titanic', 'Romance'))
+  console.log(adicionarFilmeFinal('Divertida Mente', 'Animação'))
+  
+  function adicionarFilmeInicio(titulo, genero){
+      filmes.unshift({
+        titulo: titulo,
+        genero: genero
+      })
+
+      return filmes
+  }
+
+  console.log(adicionarFilmeInicio('O podereso Chefão', 'Drama'))
+  console.log(adicionarFilmeInicio('Matrix', 'Ação'))
+
+  const subFilmes = filmes.slice(0, 2 + 1) // Passando os elementos do indice 0 ao 2 do OBJETO FILMES para o SUBFILME
+  console.log(subFilmes)
+
+  const subFilmes2 = filmes.slice(2) // Passando os elementos apartir do indice 2 do OBJETO FILMES para o SUBFILME2
+  console.log(subFilmes2)
+
+  // Percorrendo os elementos do objeto FILME
+  filmes.forEach((filme) => {
+    console.log(`Exibindo filme: ${filme.titulo}, genero ${filme.genero}`)
+  })
+
+  subFilmes.forEach((filme) => {
+      console.log(`Exibindo filme: ${filme.titulo}, genero ${filme.genero}`)
+  })
+
+  // Verifiando Generos de Filmes
+
+  // O método includes() está sendo aplicado diretamente no array de objetos filmes, mas isso não funciona corretamente nesse caso,
+  //  porque filmes é um array de objetos, e includes('Romance') procura por uma string exata (não por uma propriedade dentro de um objeto).
+//   function verificarGenero(genero) {
+//     if (filmes.includes(genero)) {
+//       console.log(`Há filmes do genero: ${genero}`)
+//     } else {
+//       console.log(`Não há filmes do genero: ${genero}`)
+//     }
+//     return console.log('Lista de filmes ', filmes)
+//   }
+
+// verificarGenero('Romance')
+
+function verificarGenero(genero) {
+  const generos = filmes.map(filme => filme.genero); // Extrai os gêneros
+  // const generos = filmes.map(f => f.genero.toLowerCase()); // ignorar maiúsculas/minúsculas na busca
+
+  if (generos.includes(genero)) {
+    console.log(`✅ Há filmes do gênero: ${genero}`);
+  } else {
+    console.log(`❌ Não há filmes do gênero: ${genero}`);
+  }
+
+  console.log('📋 Lista de filmes:', filmes);
+}
+
+
+verificarGenero('Romance');
+verificarGenero('Terror');
+
+// Lista de Compras ao Contrário
+const listaCompras = [
+  'Arroz',
+  'Feijão',
+  'Macarrão',
+  'Leite',
+  'Ovos',
+  'Pão'
+]
+
+listaCompras.reverse() //Inverterá as posições do final para o inicio. Dá para ordernar do maior para o menor
+
+console.log(listaCompras)
+
+// Imprimindo os itens
+// Para pegar o índice no forEach, você pode usar o segundo parâmetro da função callback.
+listaCompras.forEach((item, indice) => {
+  console.log(`Item ${indice}: ${item}`);
+});
+
+// Se quiser começar a numeração do item a partir de 1:
+listaCompras.forEach((item, indice) => {
+  console.log(`Item ${indice + 1}: ${item}`);
+});
+
+console.log(listaCompras.includes("Leite"))
+console.log(listaCompras.slice(3))

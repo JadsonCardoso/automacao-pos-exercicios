@@ -185,7 +185,8 @@ letras.unshift('1') // Adicionando apenas um item
 console.log(letras)
 
 // Métodos de array: indexOf e lastIdexOf
-// INDEXOF nos permite encontrar o índice de um elemento, que passamos como argumento para o método. Ele busca da esquerda para direta, ou seja, do ínicio ao fim
+// INDEXOF nos permite encontrar o índice de um elemento, que passamos como argumento para o método. 
+// Ele busca da esquerda para direta, ou seja, do ínicio ao fim
 // LASTINDEXOF é usado quando há repetições de elementos e precisamos do índice da última ocorrência, ou seja, de trás para frente
 // OBS: Caso passe um valor que não existe no array, muitos métodos vai retornar -1
 
@@ -197,5 +198,80 @@ console.log(meusElementos[meusElementos.indexOf("Abacate")]) // Exibi o valor pa
 
 console.log(meusElementos.lastIndexOf("Abacate")) // Ele vai acessar o último elemento dentro do array com este valor
 
+// método de array Slice: É utilizado para extrair um array menor de um array maior.
+// Intervalo de elementos é determinado pelos parâmetros que são: Indice de inicio e indice de fim
+// O último elemento é ignorado, se quisermos ele devemos somar +1 ao índice final. 
+
+const testeSlice = ["a", "b", "c", "d", "e", "f"]
+
+console.log(testeSlice)
+
+const subArray = testeSlice.slice(2, 4) // Irá armazenar os elemento apartir do índice 2 (c) até o elemento do índice 3, 
+                                        // mas o índice 4 (e) nãio será apresentado.
+console.log(subArray)
+
+console.log(testeSlice) // O slice não altera o array original
+
+const subArray2 = testeSlice.slice(2, 4 + 1) // Irá armazenar os elemento apartir do índice 2 (c), mais o índice 4 (e).
+console.log(subArray2)
+
+const subArray3 = testeSlice.slice(10, 20)
+console.log(subArray3) // Caso passarmos indices que não existe para o SLICE, o mesmo retornar o ARRAY como vazio.
 
 
+const subArray4  = testeSlice.slice(2) // Irá receber a apartir do indice 2, até utlimo elemento
+console.log(subArray4)
+
+
+// metodo de array FOREACH: forEach é como uma estrutura for ou while
+// Ele percorre cada um dos elementos do array
+// sua sintaxe é mais simples
+
+const nums = [1, 2, 3, 4, 5]
+
+nums.forEach((numero) => { // a função anômimo que é executada em casa um dos itens. O argumento dentro dela é a unidade individual 
+                          // de cada um dois itens pela repetição ou SEJA, É onde acessar os elementos do ARRAY.
+    console.log(`O número é ${numero}`) // O Argumento mostra extamente a posição do item.
+})
+
+// Exemplo com lista de objetos
+// Boas práticas: Coloque o array sempre com o nome no plural
+const posts = [
+    {titulo: "Primeiro post", categoria: "php"},
+    {titulo: "Segundo post", categoria: "JS"},
+    {titulo: "Terceiro post", categoria: "BD"}
+]
+
+// Boas práticas, colooque o argumento do FOREACH sempre no singular.
+posts.forEach((post) => {
+    console.log(`Exibindo post: ${post.titulo}, da categoria: ${post.categoria}`) // Ao passarmos dessa forna, ele vai percorrer os elementos conforme a propriedades dos objetos.
+    console.log(`Exibindo post: ${post}`) // Ao passarmos dessa forna, ele vai percorrer os elementos mas não vai apresentar os valores vai parecer como "[object Object]"
+})
+
+// Método de array Includes: Verifica se oo array tem um elemento
+// Usamos no array e como ARGUMENTO colocamos o elemento que buscamos
+// Ele torna um valor BOOLEANO
+
+const marcas = ["BMW", "VW", "Fiat"]
+console.log(marcas.includes("Fiat")) // Verificando se existe o elemento "FIAT" no array. Como existe, ele vai retornar TRUE
+
+console.log(marcas.includes("Kia"))
+
+// Usando INCLUDES na aplicação
+
+if (marcas.includes("BMW")) {
+    console.log("Há carros da marca BMW!")
+}
+
+// Método de array reverse: Inverte os elementos de um array
+// Esse método modifica o array original, tome cuidado!
+const reverseTest = [1, 2, 3, 4, 5]
+
+reverseTest.reverse() // Inverterá as posições do final para o inicio. Dá para ordernar do maior para o menor
+
+console.log(reverseTest)
+
+// MÉTODOS DE STRING: Strings também são OBJETOS ou seja, tem métodos e propriedades.
+// Alguns métodos são muito semelhantes aos de array
+// Podemos usar o LENGTH em uma STRING ou ARRAY
+// Também podemos Acessar seus caracteres pelo seu índice
