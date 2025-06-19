@@ -33,7 +33,8 @@ console.log(nome.length) // Conta a quantidade de que a STRING tem
 
 const ordermNumeros = [1,2,3]
 // Ao invocar um objeto e no final colocarmos o '.' ponto. Serão exibidos os métodos, os quais estão Com ícone ROXO: Exemplo = ordemNumeros.
-const outroNumeros = numeros.concat(ordermNumeros)  // o método CONCAT concatena os arrays. Nesse exemplo, criamos o array outroNumeros com os arrays "numeros" com "ordemNumeros" Ou seja, juntos.
+const outroNumeros = numeros.concat(ordermNumeros)  // o método CONCAT concatena os arrays. 
+                                                    // Nesse exemplo, criamos o array outroNumeros com os arrays "numeros" com "ordemNumeros" Ou seja, juntos.
 
 console.log(outroNumeros)
 
@@ -45,9 +46,9 @@ console.log(text.indexOf('e'))// Método para encontrar a posição de um caract
 // OBJETOS = Em JS temos um tipo de dados que é o objetos, mas seu nome técnico é OBJECT literals
 // Isso porque o OBJETO tem da Orientação a Objetos com outros recursos: instancia, herança...
 // O LITERALS possui apenas propriedades e métodos nos mesmo os criamos, ele fica em um bloco {}
-// As propriedades são como variáveis e a atribuição de valor a propriedade é como ':' exemplo: nome: 'Teste' ou seja, nome recebe 'teste'
+// As propriedades são como variáveis e a atribuição de valor a propriedade é como ':' exemplo: nome: 'Teste' ou seja, nome recebe 'Teste'
 const pessoa = {
-    nome: 'Jadson', // LEMRBANDO QUE AS VARIÁVEIS AQUI SÃO COMO PROPRIEDADES
+    nome: 'Jadson', // LEMRBANDO QUE AS PROPRIEDADES SÃO COMO VARIÁVEIS
     idade: 28,
     profissão: 'QA'
 }
