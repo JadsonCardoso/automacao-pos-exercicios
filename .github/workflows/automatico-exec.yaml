@@ -1,0 +1,24 @@
+name: 'Execução Agendada'
+
+on:
+  schedule: 
+    - cron: '0 6 * * 4'
+
+jobs: 
+  unidade:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositório
+        uses: actions/checkout@v4
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Executar testes
+        run: npx mocha testes/trabalho-final.js
