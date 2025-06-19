@@ -2,7 +2,7 @@ name: 'Execução Agendada'
 
 on:
   schedule: 
-    - cron: '40 23 * * 4'
+    - cron: '40 23 * * 3'
 
 jobs: 
   unidade:
