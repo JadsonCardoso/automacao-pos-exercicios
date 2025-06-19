@@ -2,7 +2,8 @@ name: 'Execução Agendada'
 
 on:
   schedule: 
-    - cron: '0 10 * * 4'
+    - cron: '30 10 * * 4'
+
 jobs:
   unidade:
     runs-on: ubuntu-latest
